@@ -1,14 +1,22 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { Moon, SunMedium } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { cn } from "@/lib/utils";
 
+const subscribe = () => () => {};
+
+function useMounted() {
+  return useSyncExternalStore(subscribe, () => true, () => false);
+}
+
 export function ThemeToggle({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme();
+  const mounted = useMounted();
 
-  const isDark = theme === "dark";
+  const isDark = mounted && theme === "dark";
   const label = isDark ? "Switch to light theme" : "Switch to dark theme";
 
   return (
