@@ -216,6 +216,13 @@ html {
   border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
 }
 
+.dark .glass {
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+  border-color: color-mix(in srgb, var(--border) 80%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
 .glass-dark {
   background: rgba(26, 26, 46, 0.6);
   backdrop-filter: blur(12px);

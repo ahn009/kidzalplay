@@ -343,7 +343,7 @@ export default function HomePage() {
         className="relative min-h-screen flex items-center overflow-hidden"
       >
         {/* Background Blobs */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none dark:opacity-40">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-warm-orange/20 rounded-full blur-3xl animate-blob" />
           <div className="absolute top-1/3 -left-40 w-96 h-96 bg-warm-green/15 rounded-full blur-3xl animate-blob-delay-2" />
           <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-warm-yellow/20 rounded-full blur-3xl animate-blob-delay-4" />
@@ -463,7 +463,7 @@ export default function HomePage() {
             >
               <div className="relative">
                 {/* Decorative ring */}
-                <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-warm-orange/20 via-warm-yellow/20 to-warm-green/20 blur-xl" />
+                <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-warm-orange/20 via-warm-yellow/20 to-warm-green/20 blur-xl dark:opacity-50" />
 
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                   <img
@@ -552,15 +552,15 @@ export default function HomePage() {
       {/* ═══════════ ABOUT SECTION ═══════════ */}
       <section id="about" className="relative py-24 overflow-hidden">
         {/* Subtle background */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-warm-yellow/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-warm-green/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-warm-yellow/10 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-warm-green/10 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image */}
             <AnimatedSection direction="left">
               <div className="relative">
-                <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-warm-green/10 to-warm-teal/10 blur-xl" />
+                <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-warm-green/10 to-warm-teal/10 blur-xl dark:opacity-50" />
                 <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
                   <img
                     src="/images/center-building.png"
@@ -665,7 +665,7 @@ export default function HomePage() {
 
       {/* ═══════════ STATS SECTION ═══════════ */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground to-foreground/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A2E] via-[#111827] to-[#0F172A] dark:from-[#05070D] dark:via-[#0B1020] dark:to-[#05070D]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,140,66,0.08),transparent_70%)]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -709,8 +709,8 @@ export default function HomePage() {
 
       {/* ═══════════ PROGRAMS SECTION ═══════════ */}
       <section id="programs" className="relative py-24 overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-warm-orange/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-warm-green/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-warm-orange/5 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-warm-green/5 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -791,7 +791,7 @@ export default function HomePage() {
               <DialogTrigger asChild>
                 <Button
                   size="lg"
-                  className="bg-foreground hover:bg-foreground/90 text-white font-bold rounded-full px-8 h-14 shadow-xl transition-all hover:scale-105"
+                  className="bg-[#1A1A2E] hover:bg-[#24243E] dark:bg-warm-orange dark:hover:bg-warm-orange-dark text-white font-bold rounded-full px-8 h-14 shadow-xl transition-all hover:scale-105"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Download Brochure
@@ -904,7 +904,7 @@ export default function HomePage() {
 
       {/* ═══════════ CONTACT / LOCATIONS SECTION ═══════════ */}
       <section id="contact" className="relative py-24 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-warm-orange/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-warm-orange/5 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
@@ -991,7 +991,7 @@ export default function HomePage() {
           {/* Contact Info Bar */}
           <AnimatedSection delay={0.3} className="mt-12">
             <Card className="border-0 shadow-xl rounded-2xl overflow-hidden">
-              <div className="bg-gradient-to-r from-foreground to-foreground/95 p-8">
+              <div className="bg-gradient-to-r from-[#1A1A2E] to-[#111827] dark:from-[#05070D] dark:to-[#0B1020] p-8">
                 <div className="grid sm:grid-cols-3 gap-8 text-center">
                   <div className="flex flex-col items-center gap-3">
                     <div className="w-14 h-14 rounded-2xl bg-warm-orange/20 flex items-center justify-center">
@@ -1094,7 +1094,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ FOOTER ═══════════ */}
-      <footer className="relative bg-foreground text-white">
+      <footer className="relative bg-[#1A1A2E] text-white dark:bg-[#05070D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Brand */}
