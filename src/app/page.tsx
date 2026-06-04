@@ -5,6 +5,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   Dialog,
   DialogContent,
@@ -239,7 +240,7 @@ export default function HomePage() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           mobileMenuOpen
-            ? "bg-white/95 shadow-lg shadow-black/5 py-3 border-b border-warm-orange/10"
+            ? "bg-background/95 shadow-lg shadow-black/5 py-3 border-b border-warm-orange/10 dark:border-white/10"
             : scrolled
             ? "glass shadow-lg shadow-black/5 py-3"
             : "bg-transparent py-5"
@@ -276,25 +277,29 @@ export default function HomePage() {
                 {link.label}
               </a>
             ))}
+            <ThemeToggle className="ml-2" />
             <Button
               asChild
-              className="ml-4 bg-warm-orange hover:bg-warm-orange-dark text-white font-bold rounded-full px-6 shadow-lg shadow-warm-orange/25 hover:shadow-warm-orange/40 transition-all"
+              className="ml-3 bg-warm-orange hover:bg-warm-orange-dark text-white font-bold rounded-full px-6 shadow-lg shadow-warm-orange/25 hover:shadow-warm-orange/40 transition-all"
             >
               <a href="#contact">Enroll Now</a>
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/90 text-foreground shadow-sm ring-1 ring-black/5 transition-colors hover:bg-warm-orange/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-orange"
-            aria-label="Toggle menu"
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-navigation"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Controls */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-card text-foreground shadow-sm ring-1 ring-border transition-colors hover:bg-warm-orange/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-orange"
+              aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -305,7 +310,7 @@ export default function HomePage() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="absolute left-4 right-4 top-full mt-2 overflow-hidden rounded-2xl border border-warm-orange/10 bg-white shadow-2xl shadow-black/15 md:hidden"
+              className="absolute left-4 right-4 top-full mt-2 overflow-hidden rounded-2xl border border-warm-orange/10 bg-card shadow-2xl shadow-black/15 md:hidden"
             >
               <div className="px-3 py-3 space-y-1">
                 {navLinks.map((link) => (
@@ -564,7 +569,7 @@ export default function HomePage() {
                   />
                 </div>
                 {/* Stat card */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+                <div className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
                   <div className="text-3xl font-black text-warm-orange">
                     <AnimatedCounter target={15} suffix="+" />
                   </div>
@@ -640,7 +645,7 @@ export default function HomePage() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-xl bg-gray-50 hover:bg-warm-orange/5 border border-gray-100 hover:border-warm-orange/20 transition-all"
+                      className="p-4 rounded-xl bg-muted/60 hover:bg-warm-orange/5 border border-border hover:border-warm-orange/20 transition-all"
                     >
                       <item.icon className="w-5 h-5 text-warm-orange mb-2" />
                       <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
@@ -737,7 +742,7 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {programs.map((program, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <Card className="group overflow-hidden border-0 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white rounded-2xl">
+                <Card className="group overflow-hidden border-0 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card rounded-2xl">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img
