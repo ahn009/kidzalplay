@@ -57,5 +57,12 @@ server.log
 /db/*.db
 /download/
 
+# local workspace helpers and demos
+/.zscripts/
+/examples/
+/mini-services/
+/worklog.md
+/Caddyfile
+
 # local agent skills
 /skills/
