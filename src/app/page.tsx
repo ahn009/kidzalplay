@@ -137,9 +137,9 @@ const programs = [
       "Structured morning and afternoon programs with homework help, recreational activities, and supervised care for school-age children.",
     icon: Clock,
     image: "/images/kids-afterschool.png",
-    color: "from-cyan-500 to-cyan-600",
-    bgColor: "bg-cyan-50",
-    textColor: "text-cyan-700",
+    color: "from-orange-400 to-orange-500",
+    bgColor: "bg-orange-50",
+    textColor: "text-orange-600",
     age: "5 - 13 years",
   },
   {
@@ -148,9 +148,9 @@ const programs = [
       "Comprehensive full-day child care providing a nurturing environment with age-appropriate curriculum, play-based learning, and social development.",
     icon: Baby,
     image: "/images/hero-children.png",
-    color: "from-sky-500 to-sky-600",
-    bgColor: "bg-sky-50",
-    textColor: "text-sky-700",
+    color: "from-teal-400 to-teal-500",
+    bgColor: "bg-teal-50",
+    textColor: "text-teal-600",
     age: "3 months - 5 years",
   },
   {
@@ -159,9 +159,9 @@ const programs = [
       "Inclusive care designed for children with special conditions, offering personalized attention and adapted activities in a supportive environment.",
     icon: Heart,
     image: "/images/kids-special.png",
-    color: "from-pink-500 to-pink-600",
-    bgColor: "bg-pink-50",
-    textColor: "text-pink-700",
+    color: "from-rose-400 to-rose-500",
+    bgColor: "bg-rose-50",
+    textColor: "text-rose-600",
     age: "All ages",
   },
   {
@@ -170,9 +170,9 @@ const programs = [
       "Creative expression through music lessons, visual arts, and craft activities that inspire imagination and develop artistic skills.",
     icon: Palette,
     image: "/images/kids-art.png",
-    color: "from-indigo-400 to-indigo-500",
-    bgColor: "bg-indigo-50",
-    textColor: "text-indigo-600",
+    color: "from-purple-400 to-purple-500",
+    bgColor: "bg-purple-50",
+    textColor: "text-purple-600",
     age: "3 - 13 years",
   },
   {
@@ -181,9 +181,9 @@ const programs = [
       "Fun-filled summer activities including outdoor games, educational field trips, swimming, and themed weekly camps to keep kids engaged.",
     icon: Sun,
     image: "/images/kids-summer.png",
-    color: "from-amber-400 to-amber-500",
-    bgColor: "bg-amber-50",
-    textColor: "text-amber-600",
+    color: "from-yellow-400 to-amber-500",
+    bgColor: "bg-yellow-50",
+    textColor: "text-yellow-600",
     age: "3 - 13 years",
   },
   {
@@ -192,9 +192,9 @@ const programs = [
       "Balanced meals and snacks prepared daily, following USDA guidelines to ensure every child receives proper nutrition for growth and energy.",
     icon: Apple,
     image: "/images/kids-nutrition.png",
-    color: "from-emerald-400 to-emerald-500",
-    bgColor: "bg-emerald-50",
-    textColor: "text-emerald-600",
+    color: "from-green-400 to-green-500",
+    bgColor: "bg-green-50",
+    textColor: "text-green-600",
     age: "All programs",
   },
 ];
@@ -532,7 +532,7 @@ export default function HomePage() {
             </div>
             <div className="h-6 w-px bg-white/30 hidden sm:block" />
             <p className="text-white/90 font-semibold">
-              27 Jasper St, Paterson, New Jersey &mdash; <span className="text-amber-200 font-extrabold">NOW ENROLLING!</span>
+              27 Jasper St, Paterson, New Jersey &mdash; <span className="text-warm-yellow font-extrabold">NOW ENROLLING!</span>
             </p>
           </div>
         </div>
@@ -655,7 +655,7 @@ export default function HomePage() {
       {/* ═══════════ STATS SECTION ═══════════ */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground to-foreground/95" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,116,144,0.08),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,140,66,0.08),transparent_70%)]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
