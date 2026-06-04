@@ -238,7 +238,9 @@ export default function HomePage() {
       {/* ── Navigation ── */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+          mobileMenuOpen
+            ? "bg-white/95 shadow-lg shadow-black/5 py-3 border-b border-warm-orange/10"
+            : scrolled
             ? "glass shadow-lg shadow-black/5 py-3"
             : "bg-transparent py-5"
         }`}
@@ -284,9 +286,12 @@ export default function HomePage() {
 
           {/* Mobile Menu Toggle */}
           <button
+            type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/90 text-foreground shadow-sm ring-1 ring-black/5 transition-colors hover:bg-warm-orange/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-warm-orange"
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -296,25 +301,26 @@ export default function HomePage() {
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
+              id="mobile-navigation"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden glass border-t border-white/20 mt-2"
+              className="absolute left-4 right-4 top-full mt-2 overflow-hidden rounded-2xl border border-warm-orange/10 bg-white shadow-2xl shadow-black/15 md:hidden"
             >
-              <div className="px-4 py-4 space-y-1">
+              <div className="px-3 py-3 space-y-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 text-sm font-semibold text-foreground/80 hover:text-warm-orange hover:bg-warm-orange/5 rounded-lg transition-all"
+                    className="block rounded-xl px-4 py-3 text-base font-bold text-foreground/85 transition-colors hover:bg-warm-orange/10 hover:text-warm-orange"
                   >
                     {link.label}
                   </a>
                 ))}
                 <Button
                   asChild
-                  className="w-full mt-2 bg-warm-orange hover:bg-warm-orange-dark text-white font-bold rounded-full shadow-lg"
+                  className="mt-2 h-12 w-full rounded-xl bg-warm-orange font-bold text-white shadow-lg hover:bg-warm-orange-dark"
                 >
                   <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
                     Enroll Now
