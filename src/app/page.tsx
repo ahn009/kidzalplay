@@ -137,8 +137,8 @@ const programs = [
     description:
       "Structured morning and afternoon support with homework help, guided activities, and supervised care for school-age children.",
     icon: Clock,
-    image: "/images/kidz-math-support.jpg",
-    imageAlt: "Teacher helping a student with schoolwork in a classroom",
+    image: "/images/kidz-official-classroom-01.jpg",
+    imageAlt: "Children participating in a supervised classroom activity",
     color: "from-orange-400 to-orange-500",
     bgColor: "bg-orange-50",
     textColor: "text-orange-600",
@@ -149,8 +149,8 @@ const programs = [
     description:
       "Full-day care in a nurturing environment with age-appropriate routines, play-based learning, and social development.",
     icon: Baby,
-    image: "/images/kidz-occupational-therapy.jpg",
-    imageAlt: "Young child stacking blocks during a guided classroom activity",
+    image: "/images/kidz-official-daycare-01.jpg",
+    imageAlt: "Children playing together in a day care setting",
     color: "from-teal-400 to-teal-500",
     bgColor: "bg-teal-50",
     textColor: "text-teal-600",
@@ -185,8 +185,8 @@ const programs = [
     description:
       "Fun-filled summer activities including outdoor games, educational field trips, swimming, and themed weekly camps to keep kids engaged.",
     icon: Sun,
-    image: "/images/kidz-classroom-presentation.jpg",
-    imageAlt: "Students presenting together during a classroom activity",
+    image: "/images/kidz-official-zoo-01.jpg",
+    imageAlt: "Children learning during an educational zoo activity",
     color: "from-yellow-400 to-amber-500",
     bgColor: "bg-yellow-50",
     textColor: "text-yellow-600",
@@ -197,8 +197,8 @@ const programs = [
     description:
       "Balanced meals and snacks prepared daily, following USDA guidelines to ensure every child receives proper nutrition for growth and energy.",
     icon: Apple,
-    image: "/images/kidz-teacher-guidance.webp",
-    imageAlt: "Teacher guiding children during a classroom activity",
+    image: "/images/kids-nutrition.png",
+    imageAlt: "Children enjoying healthy food and nutrition activities",
     color: "from-green-400 to-green-500",
     bgColor: "bg-green-50",
     textColor: "text-green-600",
@@ -208,14 +208,21 @@ const programs = [
 
 /* ─── Gallery Images ─── */
 const galleryImages = [
-  { src: "/images/kidz-writing-classroom.jpg", alt: "Focused classroom learning" },
-  { src: "/images/kidz-hero-speech-therapy.jpg", alt: "Speech and communication support" },
-  { src: "/images/kidz-art-support.jpg", alt: "Art class encouragement" },
-  { src: "/images/kidz-math-support.jpg", alt: "One-on-one academic support" },
-  { src: "/images/kidz-teacher-classroom.jpg", alt: "Teacher support in class" },
-  { src: "/images/kidz-occupational-therapy.jpg", alt: "Guided early learning activity" },
-  { src: "/images/kidz-classroom-presentation.jpg", alt: "Collaborative classroom presentation" },
-  { src: "/images/kidz-teacher-guidance.webp", alt: "Teacher-guided learning" },
+  { src: "/images/kidz-official-location-01.jpg", alt: "New Kidz at Play location" },
+  { src: "/images/kidz-official-location-03.jpg", alt: "Bright learning room" },
+  { src: "/images/kidz-official-location-04.jpg", alt: "Child care classroom setup" },
+  { src: "/images/kidz-official-location-05.jpg", alt: "Activity space for children" },
+  { src: "/images/kidz-official-location-06.jpg", alt: "Play and learning area" },
+  { src: "/images/kidz-official-location-07.jpg", alt: "Classroom furniture and supplies" },
+  { src: "/images/kidz-official-location-08.jpg", alt: "Welcoming center interior" },
+  { src: "/images/kidz-official-curriculum-01.jpg", alt: "Child care curriculum materials" },
+];
+
+const trustImages = [
+  { src: "/images/kidz-math-support.jpg", alt: "" },
+  { src: "/images/kidz-occupational-therapy.jpg", alt: "" },
+  { src: "/images/kidz-classroom-presentation.jpg", alt: "" },
+  { src: "/images/kidz-teacher-guidance.webp", alt: "" },
 ];
 
 /* ─── Navigation Data ─── */
@@ -346,19 +353,14 @@ export default function HomePage() {
       {/* ═══════════ HERO SECTION ═══════════ */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center overflow-hidden"
+        className="relative min-h-screen flex items-center overflow-hidden bg-[linear-gradient(180deg,color-mix(in_srgb,var(--warm-cream)_72%,white)_0%,var(--background)_78%)] dark:bg-[linear-gradient(180deg,#111520_0%,var(--background)_78%)]"
       >
-        {/* Background Blobs */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none dark:opacity-40">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-warm-orange/20 rounded-full blur-3xl animate-blob" />
-          <div className="absolute top-1/3 -left-40 w-96 h-96 bg-warm-green/15 rounded-full blur-3xl animate-blob-delay-2" />
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-warm-yellow/20 rounded-full blur-3xl animate-blob-delay-4" />
-        </div>
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-warm-orange/30 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-[0.92fr_1.08fr] gap-10 lg:gap-16 items-center">
             {/* Left: Text Content */}
-            <div className="space-y-8">
+            <div className="space-y-7 text-center lg:text-left">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -366,7 +368,7 @@ export default function HomePage() {
               >
                 <Badge
                   variant="secondary"
-                  className="px-4 py-2 text-sm font-bold bg-warm-green/10 text-warm-green-dark border border-warm-green/20 rounded-full"
+                  className="px-4 py-2 text-sm font-bold bg-white/80 text-warm-green-dark border border-warm-green/20 rounded-full shadow-sm dark:bg-card/80"
                 >
                   <Sparkles className="w-4 h-4 mr-2" />
                   A Non-Profit Organization Since 2010
@@ -377,7 +379,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight text-balance"
               >
                 Enrichment{" "}
                 <span className="gradient-text-warm">Beyond the</span>
@@ -389,7 +391,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-lg sm:text-xl text-muted-foreground max-w-lg leading-relaxed"
+                className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground lg:mx-0 leading-relaxed text-balance"
               >
                 Helping children, including children with autism and developmental needs, learn
                 in a friendly, educational, and safe environment. From{" "}
@@ -400,12 +402,12 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.45 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:justify-start"
               >
                 <Button
                   asChild
                   size="lg"
-                  className="bg-warm-orange hover:bg-warm-orange-dark text-white font-bold rounded-full px-8 h-14 text-base shadow-xl shadow-warm-orange/30 hover:shadow-warm-orange/50 transition-all hover:scale-105"
+                  className="bg-warm-orange hover:bg-warm-orange-dark text-white font-bold rounded-full px-8 h-14 text-base shadow-lg shadow-warm-orange/25 transition-all active:scale-[0.98]"
                 >
                   <a href="#programs">
                     Explore Programs
@@ -416,7 +418,7 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="font-bold rounded-full px-8 h-14 text-base border-2 border-foreground/20 hover:border-warm-orange hover:text-warm-orange transition-all"
+                  className="bg-white/70 font-bold rounded-full px-8 h-14 text-base border-2 border-foreground/15 hover:border-warm-orange hover:text-warm-orange transition-all active:scale-[0.98] dark:bg-card/70"
                 >
                   <a href="#about">Learn More</a>
                 </Button>
@@ -427,17 +429,17 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex items-center gap-6 pt-4"
+                className="flex flex-wrap items-center justify-center gap-4 pt-2 lg:justify-start"
               >
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="w-9 h-9 rounded-full border-2 border-white bg-gradient-to-br from-warm-orange to-warm-yellow flex items-center justify-center text-white text-xs font-bold"
-                      >
-                        {String.fromCharCode(64 + i)}
-                      </div>
+                    {trustImages.map((img) => (
+                      <img
+                        key={img.src}
+                        src={img.src}
+                        alt=""
+                        className="h-9 w-9 rounded-full border-2 border-white object-cover shadow-sm"
+                      />
                     ))}
                   </div>
                   <div className="text-sm">
@@ -465,28 +467,28 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative hidden lg:block"
+              className="relative"
             >
               <div className="relative">
                 {/* Decorative ring */}
-                <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-warm-orange/20 via-warm-yellow/20 to-warm-green/20 blur-xl dark:opacity-50" />
+                <div className="absolute -inset-3 rounded-[1.75rem] bg-white/70 shadow-2xl shadow-warm-orange/10 dark:bg-card/60" />
 
-                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+                <div className="relative overflow-hidden rounded-[1.75rem] border border-white/70 shadow-2xl shadow-black/10 dark:border-white/10">
                   <img
-                    src="/images/kidz-writing-classroom.jpg"
-                    alt="Child writing in a classroom at Kidz at Play"
-                    className="w-full h-auto object-cover aspect-[4/3]"
+                    src="/images/kidz-official-afterschool-01.jpg"
+                    alt="Children learning together at Kidz at Play"
+                    className="aspect-[4/3] w-full object-cover"
                   />
 
                   {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
                 </div>
 
                 {/* Floating card: New Location */}
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -left-8 top-12 glass rounded-2xl p-4 shadow-xl max-w-[220px]"
+                  className="absolute left-3 top-3 max-w-[220px] rounded-2xl bg-white/90 p-4 shadow-xl shadow-black/10 ring-1 ring-black/5 backdrop-blur dark:bg-card/90 sm:-left-6 sm:top-10"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-warm-green/20 flex items-center justify-center">
@@ -503,7 +505,7 @@ export default function HomePage() {
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -right-6 bottom-16 glass rounded-2xl p-4 shadow-xl max-w-[200px]"
+                  className="absolute bottom-4 right-3 max-w-[200px] rounded-2xl bg-white/90 p-4 shadow-xl shadow-black/10 ring-1 ring-black/5 backdrop-blur dark:bg-card/90 sm:-right-5 sm:bottom-14"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-warm-orange/20 flex items-center justify-center">
@@ -556,26 +558,22 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ ABOUT SECTION ═══════════ */}
-      <section id="about" className="relative py-24 overflow-hidden">
-        {/* Subtle background */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-warm-yellow/10 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-warm-green/10 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
-
+      <section id="about" className="relative overflow-hidden py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image */}
             <AnimatedSection direction="left">
               <div className="relative">
-                <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-warm-green/10 to-warm-teal/10 blur-xl dark:opacity-50" />
-                <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
+                <div className="absolute -inset-3 rounded-[1.75rem] bg-warm-green/10" />
+                <div className="relative overflow-hidden rounded-[1.75rem] border border-border bg-card shadow-xl shadow-black/5">
                   <img
-                    src="/images/kidz-teacher-classroom.jpg"
-                    alt="Teacher supporting a child in a classroom"
+                    src="/images/kidz-official-location-02.jpg"
+                    alt="New Kidz at Play classroom and child care space"
                     className="w-full h-auto object-cover aspect-[4/3]"
                   />
                 </div>
                 {/* Stat card */}
-                <div className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
+                <div className="absolute -bottom-6 right-4 rounded-2xl border border-border bg-card/95 p-6 shadow-xl shadow-black/10 backdrop-blur sm:-right-6">
                   <div className="text-3xl font-black text-warm-orange">
                     <AnimatedCounter target={15} suffix="+" />
                   </div>
@@ -651,7 +649,7 @@ export default function HomePage() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-xl bg-muted/60 hover:bg-warm-orange/5 border border-border hover:border-warm-orange/20 transition-all"
+                      className="rounded-xl border border-border bg-card p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-warm-orange/25 hover:shadow-md"
                     >
                       <item.icon className="w-5 h-5 text-warm-orange mb-2" />
                       <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
@@ -670,9 +668,9 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ STATS SECTION ═══════════ */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A2E] via-[#111827] to-[#0F172A] dark:from-[#05070D] dark:via-[#0B1020] dark:to-[#05070D]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,140,66,0.08),transparent_70%)]" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -714,10 +712,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ PROGRAMS SECTION ═══════════ */}
-      <section id="programs" className="relative py-24 overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-warm-orange/5 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
-        <div className="absolute bottom-20 right-10 w-64 h-64 bg-warm-green/5 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
-
+      <section id="programs" className="relative overflow-hidden bg-muted/35 py-24 dark:bg-muted/15">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -748,16 +743,16 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {programs.map((program, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <Card className="group overflow-hidden border-0 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-card rounded-2xl">
+                <Card className="group h-full overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-warm-orange/20 hover:shadow-xl hover:shadow-black/10">
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-52 overflow-hidden">
                     <img
                       src={program.image}
                       alt={program.imageAlt}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t ${program.color} opacity-40 group-hover:opacity-50 transition-opacity`}
+                      className={`absolute inset-0 bg-gradient-to-t ${program.color} opacity-25 transition-opacity group-hover:opacity-35`}
                     />
                     <div className="absolute top-4 left-4">
                       <Badge className={`${program.bgColor} ${program.textColor} font-bold rounded-full border-0 px-3`}>
@@ -770,17 +765,17 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
+                  <CardContent className="flex min-h-[230px] flex-col p-6">
                     <h3 className="text-xl font-extrabold text-foreground mb-2">
                       {program.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {program.description}
                     </p>
-                    <div className="mt-4">
+                    <div className="mt-auto pt-5">
                       <Button
                         variant="ghost"
-                        className="text-warm-orange hover:text-warm-orange-dark font-bold p-0 h-auto hover:bg-transparent"
+                        className="h-auto p-0 font-bold text-warm-orange hover:bg-transparent hover:text-warm-orange-dark"
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-1" />
                       </Button>
@@ -833,7 +828,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ GALLERY SECTION ═══════════ */}
-      <section id="gallery" className="relative py-24 overflow-hidden bg-warm-cream">
+      <section id="gallery" className="relative overflow-hidden bg-warm-cream py-24 dark:bg-muted/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -861,12 +856,13 @@ export default function HomePage() {
 
           {/* Gallery Grid */}
           <AnimatedSection>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="hidden gap-4 md:grid md:grid-cols-4">
               {galleryImages.map((img, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ scale: 1.03 }}
-                  className={`relative overflow-hidden rounded-2xl cursor-pointer group ${
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  className={`group relative cursor-pointer overflow-hidden rounded-2xl border border-white/70 bg-card shadow-sm shadow-black/5 ${
                     i === 0 ? "md:col-span-2 md:row-span-2" : ""
                   }`}
                 >
@@ -874,7 +870,7 @@ export default function HomePage() {
                     src={img.src}
                     alt={img.alt}
                     className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${
-                      i === 0 ? "aspect-square md:aspect-auto md:h-full" : "aspect-square"
+                      i === 0 ? "aspect-[4/3] md:aspect-auto md:h-full" : "aspect-square"
                     }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -909,9 +905,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ CONTACT / LOCATIONS SECTION ═══════════ */}
-      <section id="contact" className="relative py-24 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-warm-orange/5 rounded-full blur-3xl pointer-events-none dark:opacity-40" />
-
+      <section id="contact" className="relative overflow-hidden py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -960,7 +954,7 @@ export default function HomePage() {
               },
             ].map((location, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all rounded-2xl group">
+                <Card className="group h-full overflow-hidden rounded-2xl border border-border/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10">
                   {/* Gradient top bar */}
                   <div
                     className={`h-2 bg-gradient-to-r ${location.gradient}`}
@@ -996,7 +990,7 @@ export default function HomePage() {
 
           {/* Contact Info Bar */}
           <AnimatedSection delay={0.3} className="mt-12">
-            <Card className="border-0 shadow-xl rounded-2xl overflow-hidden">
+            <Card className="overflow-hidden rounded-2xl border-0 shadow-xl shadow-black/10">
               <div className="bg-gradient-to-r from-[#1A1A2E] to-[#111827] dark:from-[#05070D] dark:to-[#0B1020] p-8">
                 <div className="grid sm:grid-cols-3 gap-8 text-center">
                   <div className="flex flex-col items-center gap-3">
@@ -1076,7 +1070,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-warm-orange hover:bg-white/90 font-bold rounded-full px-10 h-14 text-base shadow-xl transition-all hover:scale-105"
+                className="h-14 rounded-full bg-white px-10 text-base font-bold text-warm-orange shadow-xl transition-all hover:bg-white/90 active:scale-[0.98]"
               >
                 <a href="tel:8622377291">
                   <Phone className="w-5 h-5 mr-2" />
@@ -1087,7 +1081,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-transparent text-white border-2 border-white/40 hover:border-white hover:bg-white/10 font-bold rounded-full px-10 h-14 text-base transition-all"
+                className="h-14 rounded-full border-2 border-white/50 bg-white/10 px-10 text-base font-bold text-white backdrop-blur transition-all hover:border-white hover:bg-white/15 active:scale-[0.98]"
               >
                 <a href="mailto:info@kidzatplay.org">
                   <Mail className="w-5 h-5 mr-2" />
