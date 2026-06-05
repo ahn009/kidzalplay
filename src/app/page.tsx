@@ -135,31 +135,34 @@ const programs = [
   {
     title: "Before & After School",
     description:
-      "Structured morning and afternoon programs with homework help, recreational activities, and supervised care for school-age children.",
+      "Structured morning and afternoon support with homework help, guided activities, and supervised care for school-age children.",
     icon: Clock,
-    image: "/images/kids-afterschool.png",
+    image: "/images/kidz-math-support.jpg",
+    imageAlt: "Teacher helping a student with schoolwork in a classroom",
     color: "from-orange-400 to-orange-500",
     bgColor: "bg-orange-50",
     textColor: "text-orange-600",
     age: "5 - 13 years",
   },
   {
-    title: "Full Care Program",
+    title: "Early Learning & Full Care",
     description:
-      "Comprehensive full-day child care providing a nurturing environment with age-appropriate curriculum, play-based learning, and social development.",
+      "Full-day care in a nurturing environment with age-appropriate routines, play-based learning, and social development.",
     icon: Baby,
-    image: "/images/hero-children.png",
+    image: "/images/kidz-occupational-therapy.jpg",
+    imageAlt: "Young child stacking blocks during a guided classroom activity",
     color: "from-teal-400 to-teal-500",
     bgColor: "bg-teal-50",
     textColor: "text-teal-600",
     age: "3 months - 5 years",
   },
   {
-    title: "Special Needs Program",
+    title: "Autism & Special Needs Support",
     description:
-      "Inclusive care designed for children with special conditions, offering personalized attention and adapted activities in a supportive environment.",
+      "Inclusive support for children with autism and developmental needs, with individualized attention and adapted learning activities.",
     icon: Heart,
-    image: "/images/kids-special.png",
+    image: "/images/kidz-hero-speech-therapy.jpg",
+    imageAlt: "Educator using sign language with children during a speech therapy activity",
     color: "from-rose-400 to-rose-500",
     bgColor: "bg-rose-50",
     textColor: "text-rose-600",
@@ -170,7 +173,8 @@ const programs = [
     description:
       "Creative expression through music lessons, visual arts, and craft activities that inspire imagination and develop artistic skills.",
     icon: Palette,
-    image: "/images/kids-art.png",
+    image: "/images/kidz-art-support.jpg",
+    imageAlt: "Teacher and child sharing encouragement during an art class",
     color: "from-purple-400 to-purple-500",
     bgColor: "bg-purple-50",
     textColor: "text-purple-600",
@@ -181,7 +185,8 @@ const programs = [
     description:
       "Fun-filled summer activities including outdoor games, educational field trips, swimming, and themed weekly camps to keep kids engaged.",
     icon: Sun,
-    image: "/images/kids-summer.png",
+    image: "/images/kidz-classroom-presentation.jpg",
+    imageAlt: "Students presenting together during a classroom activity",
     color: "from-yellow-400 to-amber-500",
     bgColor: "bg-yellow-50",
     textColor: "text-yellow-600",
@@ -192,7 +197,8 @@ const programs = [
     description:
       "Balanced meals and snacks prepared daily, following USDA guidelines to ensure every child receives proper nutrition for growth and energy.",
     icon: Apple,
-    image: "/images/kids-nutrition.png",
+    image: "/images/kidz-teacher-guidance.webp",
+    imageAlt: "Teacher guiding children during a classroom activity",
     color: "from-green-400 to-green-500",
     bgColor: "bg-green-50",
     textColor: "text-green-600",
@@ -202,14 +208,14 @@ const programs = [
 
 /* ─── Gallery Images ─── */
 const galleryImages = [
-  { src: "/images/hero-children.png", alt: "Children playing together" },
-  { src: "/images/kids-art.png", alt: "Art and craft activities" },
-  { src: "/images/kids-music.png", alt: "Music program" },
-  { src: "/images/kids-nutrition.png", alt: "Healthy nutrition" },
-  { src: "/images/kids-summer.png", alt: "Summer program activities" },
-  { src: "/images/kids-afterschool.png", alt: "After school program" },
-  { src: "/images/center-building.png", alt: "Our modern center" },
-  { src: "/images/kids-special.png", alt: "Special needs care" },
+  { src: "/images/kidz-writing-classroom.jpg", alt: "Focused classroom learning" },
+  { src: "/images/kidz-hero-speech-therapy.jpg", alt: "Speech and communication support" },
+  { src: "/images/kidz-art-support.jpg", alt: "Art class encouragement" },
+  { src: "/images/kidz-math-support.jpg", alt: "One-on-one academic support" },
+  { src: "/images/kidz-teacher-classroom.jpg", alt: "Teacher support in class" },
+  { src: "/images/kidz-occupational-therapy.jpg", alt: "Guided early learning activity" },
+  { src: "/images/kidz-classroom-presentation.jpg", alt: "Collaborative classroom presentation" },
+  { src: "/images/kidz-teacher-guidance.webp", alt: "Teacher-guided learning" },
 ];
 
 /* ─── Navigation Data ─── */
@@ -385,8 +391,8 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-lg sm:text-xl text-muted-foreground max-w-lg leading-relaxed"
               >
-                Providing a friendly atmosphere, educational and safe
-                environment for our children. From{" "}
+                Helping children, including children with autism and developmental needs, learn
+                in a friendly, educational, and safe environment. From{" "}
                 <span className="font-bold text-foreground">3 months to 13 years old</span>.
               </motion.p>
 
@@ -467,8 +473,8 @@ export default function HomePage() {
 
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                   <img
-                    src="/images/hero-children.png"
-                    alt="Happy children at Kidz at Play"
+                    src="/images/kidz-writing-classroom.jpg"
+                    alt="Child writing in a classroom at Kidz at Play"
                     className="w-full h-auto object-cover aspect-[4/3]"
                   />
 
@@ -563,8 +569,8 @@ export default function HomePage() {
                 <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-warm-green/10 to-warm-teal/10 blur-xl dark:opacity-50" />
                 <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
                   <img
-                    src="/images/center-building.png"
-                    alt="Kidz at Play Center"
+                    src="/images/kidz-teacher-classroom.jpg"
+                    alt="Teacher supporting a child in a classroom"
                     className="w-full h-auto object-cover aspect-[4/3]"
                   />
                 </div>
@@ -605,9 +611,9 @@ export default function HomePage() {
                     organization incorporated in 2010, focused on programs and
                     services of social and educational developments. We promote
                     the universal right to a transformative education that
-                    empowers children and adolescents, including those with
-                    special conditions who face challenges in their social
-                    environment.
+                    empowers children and adolescents, including children with
+                    autism and developmental needs who benefit from structured
+                    social and educational support.
                   </p>
                   <p>
                     Our services provide opportunities for social groups in need
@@ -747,7 +753,7 @@ export default function HomePage() {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={program.image}
-                      alt={program.title}
+                      alt={program.imageAlt}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div
@@ -1154,8 +1160,8 @@ export default function HomePage() {
               <ul className="space-y-3">
                 {[
                   "Before & After School",
-                  "Full Care Program",
-                  "Special Needs",
+                  "Early Learning & Full Care",
+                  "Autism & Special Needs Support",
                   "Music & Art",
                   "Summer Program",
                   "Healthy Nutrition",
